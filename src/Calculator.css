@@ -37,7 +37,6 @@ button:hover {
   background-color: #ccc;
 }
 
-.equals,
 .plus {
   grid-column: span 2;
 }

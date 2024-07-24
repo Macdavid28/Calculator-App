@@ -12,6 +12,10 @@ function Calculator() {
     setInput("");
   };
 
+  const handleSquareRoot = () => {
+    setInput(Math.sqrt(input).toString());
+  };
+
   const handleCalculate = () => {
     try {
       // eslint-disable-next-line
@@ -19,6 +23,10 @@ function Calculator() {
     } catch (error) {
       setInput("Error");
     }
+  };
+
+  const handleDelete = () => {
+    setInput((prevInput) => prevInput.slice(0, -1));
   };
 
   return (
@@ -39,6 +47,7 @@ function Calculator() {
         <button onClick={() => handleButtonClick("-")}>-</button>
         <button onClick={() => handleButtonClick("0")}>0</button>
         <button onClick={() => handleButtonClick(".")}>.</button>
+        <button onClick={handleSquareRoot}>√</button>
         <button onClick={handleCalculate} className="equals">
           =
         </button>
@@ -47,6 +56,9 @@ function Calculator() {
         </button>
         <button onClick={handleClear} className="clear">
           C
+        </button>
+        <button onClick={handleDelete} className="delete">
+          DEL
         </button>
       </div>
     </div>
