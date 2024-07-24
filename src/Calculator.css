@@ -37,10 +37,6 @@ button:hover {
   background-color: #ccc;
 }
 
-.plus {
-  grid-column: span 2;
-}
-
 .clear {
   grid-column: span 2;
   background-color: #333;

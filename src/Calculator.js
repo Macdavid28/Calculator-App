@@ -54,11 +54,11 @@ function Calculator() {
         <button onClick={() => handleButtonClick("+")} className="plus">
           +
         </button>
+        <button onClick={handleDelete} className="delete">
+          CE
+        </button>
         <button onClick={handleClear} className="clear">
           C
-        </button>
-        <button onClick={handleDelete} className="delete">
-          DEL
         </button>
       </div>
     </div>
